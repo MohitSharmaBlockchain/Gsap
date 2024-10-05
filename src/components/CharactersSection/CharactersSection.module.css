@@ -1,0 +1,45 @@
+.wrapSection {
+    padding: 70px;
+    color: white;
+    background: #0A090C;
+    display: flex;
+    gap: 200px;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    justify-content: center;
+}
+
+.content h1 {
+    color: white;
+    font-family: 'ClashGrotesk-Medium';
+    font-size: 48px;
+}
+
+.content p {
+    color: white;
+    font-family: 'Ambit';
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.content span {
+    font-family: 'Ambit';
+    font-size: 16px;
+    border: 2px solid #5C5C5E;
+    background: #565658AB;
+    width: max-content;
+    padding: 12px 16px 8px 16px;
+    border-radius: 20px;
+}
+
+.characters {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}

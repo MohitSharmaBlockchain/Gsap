@@ -1,0 +1,75 @@
+.upperWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 90px;
+    padding-top: 40px;
+    background-color: #0A090C;
+}
+
+.wrapSection {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 2fr;
+    row-gap: 25px;
+    column-gap: 36px;
+}
+
+.wrapSection2 {
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.wrapSection > div {
+    background-color: #B91416;
+    height: 305px;
+}
+
+.wrapSection div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gridContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridContent > h1 {
+    color: white;
+    font-family: 'ClashGrotesk-Medium';
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.gridContent > p {
+    color: white;
+    font-family: "Ambit-600";
+    font-size: 20px;
+}
+
+.gridContent > .heading {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.heading > .title {
+    border: 1px solid white;
+    font-size: 14px;
+    font-family: "Ambit";
+    padding: 12px 30px 7px 30px;
+    border-radius: 34px;
+}
+
+.line {
+    height: 1px;
+    width: 80px;
+    background: white;
+}

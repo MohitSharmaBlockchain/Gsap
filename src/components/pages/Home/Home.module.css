@@ -1,0 +1,17 @@
+.wrap_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background: url(https://res.cloudinary.com/seimutants/image/upload/v1724559162/gynaimvzitfaigpwuasc.webp), #FC4F66;
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
+    background-position: 0 -300px;
+}
+
+@media (max-width: 1300px) {
+    .wrap_section {
+        background-size: cover;
+    background-position: 0 -600px;
+    }
+}

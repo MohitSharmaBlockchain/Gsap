@@ -1,0 +1,10 @@
+.wrapSection {
+    height: 200vh;
+    width: 100%;
+    background-color: #0A090C;
+    background-image: url(https://res.cloudinary.com/seimutants/image/upload/v1727763327/mw6jbhb68a2yl9nzubki.webp);
+    border-radius: 18px;
+    width: 91%;
+    overflow: hidden;
+    margin-top: 168px;
+}
