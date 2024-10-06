@@ -5,6 +5,7 @@
     display: flex;
     gap: 200px;
     width: 100%;
+    padding-top: 40px;
 }
 
 .content {

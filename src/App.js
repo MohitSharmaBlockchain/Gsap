@@ -8,42 +8,40 @@ import {
 import { useEffect, useState } from "react";
 import Home from './components/pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
-// import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
 function App() {
   const[loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // const ctx = gsap.context(() => {
-        // gsap.registerPlugin(ScrollTrigger);
-        // ScrollTrigger.normalizeScroll({ allowNestedScroll: true })
-        // ScrollTrigger.config({ limitCallbacks: true })
-
-        // gsap.set('.app', { gap: '36px' })
+    const ctx = gsap.context(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.normalizeScroll({ allowNestedScroll: true })
+        ScrollTrigger.config({ limitCallbacks: true })
         
-      //   var tl = gsap.timeline({ 
-      //     scrollTrigger: {
-      //       trigger: '.app',
-      //       start: 'top top',
-      //       end: `+=300`,
-      //       markers: true,
-      //       scrub: true,
-      //     }
-      //    })
-      //   tl.to('#navbar', {
-      //     borderRadius: 0,
-      //     width: '100%',
-      //     marginTop: 0
-      //   }, 0)
-      //   tl.to('#heroSection', {
-      //     borderRadius: 0,
-      //     width: '100%',
-      //     marginTop: '100px'
-      //   }, 0)
-      // });     
+        var tl = gsap.timeline({ 
+          scrollTrigger: {
+            trigger: '.app',
+            start: 'top top',
+            end: `+=200`,
+            markers: false,
+            scrub: true,
+          }
+         })
+        tl.to('#navbar', {
+          borderRadius: 0,
+          width: '100%',
+          marginTop: 0
+        }, 0)
+        tl.to('#heroSection', {
+          borderRadius: 0,
+          width: '100%',
+          marginTop: '230px'
+        }, 0)
+      });     
       
-      // return () => ctx.revert();
+      return () => ctx.revert();
   }, [])
 
   useEffect(() => {

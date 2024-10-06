@@ -1,10 +1,9 @@
 .wrapSection {
-    height: 200vh;
+    height: calc(100vh - 200px) !important;
     width: 100%;
-    background-color: #0A090C;
-    background-image: url(https://res.cloudinary.com/seimutants/image/upload/v1727763327/mw6jbhb68a2yl9nzubki.webp);
-    border-radius: 18px;
-    width: 91%;
+    background-color: #ff494b;
+    background-image: url(https://res.cloudinary.com/seimutants/image/upload/v1728175616/tqbuak90khcrqgk9jpuz.png);
+    width: 100%;
     overflow: hidden;
-    margin-top: 168px;
+    margin-bottom: 48px;
 }

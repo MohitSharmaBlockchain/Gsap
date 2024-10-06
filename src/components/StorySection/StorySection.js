@@ -2,7 +2,7 @@ import styles from './StorySection.module.css'
 
 const StorySection = () => {
   return (
-    <div className={styles.upperWrap}>
+    <div id="storySection" className={styles.upperWrap}>
       <div className={styles.wrapSection}>
       <div className={styles.gridContent}>
         <div className={styles.heading}>
