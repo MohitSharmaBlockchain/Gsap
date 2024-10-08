@@ -6,15 +6,14 @@ import BuySection from '../../BuySection/BuySection';
 import CharactersSection from '../../CharactersSection/CharactersSection';
 
 const Home = () => {
-  const [showScreen, setShowScreen] = useState(false);
-  const [showWebsite, setShowWebsite] = useState(false);
+  const [updateBuySectionGsap, setupdateBuySectionGsap] = useState(false);
   
   return (
     <>
-      <HeroSection />
+      <HeroSection setupdateBuySectionGsap={setupdateBuySectionGsap} />
       <CharactersSection />
       <StorySection />
-      <BuySection />
+      <BuySection updateBuySectionGsap={updateBuySectionGsap} />
       <div className={styles.wrap_section}>
         {/* <ExploreSection />
         <CreateLick />

@@ -7,8 +7,8 @@ const Navbar = () => {
   const [showWebsite, setShowWebsite] = useState(false);
   
   return (
-    <div id="navbar" className={styles.wrapSection}>
-      <img src="https://res.cloudinary.com/seimutants/image/upload/v1727759994/raq2w8ytt6j6t2kyctex.svg" />
+    <div style={window.innerWidth > 899 ? { zoom: `${window.innerWidth*0.06510416666}%` } : {}} id="navbar" className={styles.wrapSection}>
+      <img src="https://res.cloudinary.com/seimutants/image/upload/v1728395874/xqjxd38yfz5wcsaxeug3.svg" />
         <div className={styles.links}>
           <h1>Characters</h1>
           <h1>About</h1>

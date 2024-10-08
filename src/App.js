@@ -10,6 +10,7 @@ import Home from './components/pages/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
+import Loader from './components/Loader/Loader';
 
 function App() {
   const[loading, setLoading] = useState(true)
@@ -24,7 +25,7 @@ function App() {
           scrollTrigger: {
             trigger: '.app',
             start: 'top top',
-            end: `+=200`,
+            end: `+=${(200/735)*(window.innerWidth/2.03443708609)}`,
             markers: false,
             scrub: true,
           }
@@ -44,24 +45,15 @@ function App() {
       return () => ctx.revert();
   }, [])
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
+  if (loading) {
+    setTimeout(() => {
       setLoading(false)
-    }, 3000);
-
-    return () => {
-      clearTimeout(timer)
-    }
-  }, []);
-
-  // if (loading) {
-  //   return (
-  //     <div>Loading...</div>
-  //   )
-  // }
+    }, 6000);
+  }
 
   return (
     <div className="app">
+      <Loader loaderComplete={!loading} />
       <Navbar />
       <Router>
         <Routes>

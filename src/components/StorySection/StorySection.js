@@ -2,7 +2,7 @@ import styles from './StorySection.module.css'
 
 const StorySection = () => {
   return (
-    <div id="storySection" className={styles.upperWrap}>
+    <div style={window.innerWidth > 899 ? { zoom: `${window.innerWidth*0.06510416666}%` } : {}} id="storySection" className={styles.upperWrap}>
       <div className={styles.wrapSection}>
       <div className={styles.gridContent}>
         <div className={styles.heading}>

@@ -1,9 +1,67 @@
 .wrapSection {
-    height: calc(100vh - 200px) !important;
     width: 100%;
     background-color: #ff494b;
-    background-image: url(https://res.cloudinary.com/seimutants/image/upload/v1728175616/tqbuak90khcrqgk9jpuz.png);
+    background-image: url("https://res.cloudinary.com/seimutants/image/upload/v1728258833/r3ttclviarsi9lh7ncnx.webp");
+    background-position: center;
+    background-size: auto 100%;
     width: 100%;
     overflow: hidden;
-    margin-bottom: 48px;
+    margin-bottom: 480px;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+    flex-direction: column;
+    height: 100%;
+    padding: 40px 50px 60px;
+}
+
+.content .headings {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contract {
+    display: flex;
+    align-items: center;
+    border: 2px solid #601516;
+    background: white;
+    border-radius: 8px;
+    padding: 13px 15px 8px 15px;
+    font-family: 'Ambit';
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.links {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 30px 80px 30px 0;
+    row-gap: 4%;
+    column-gap: 4%;
+}
+
+.links .img {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    height: 48%;
+    width: 48%;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    border-radius: 10px;
+}
+
+.links .img img {
+    height: 100%;
 }

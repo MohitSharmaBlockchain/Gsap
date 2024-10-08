@@ -1,11 +1,10 @@
 .wrapSection {
-    height: 1800px;
     background-color: #0A090C;
     background-image: url(https://res.cloudinary.com/seimutants/image/upload/v1727763327/mw6jbhb68a2yl9nzubki.webp);
     border-radius: 18px;
     width: 91%;
     overflow: hidden;
-    margin-top: 168px;
+    margin-top: 11vw;
 }
 
 .social {
@@ -66,16 +65,15 @@
 }
 
 .charactersSlider {
-    padding-top: 90px;
+    /* padding-top: 90px; */
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
     position: relative;
     z-index: 10;
+    /* height: calc(100vh - 45px); */
 }
 
 .charactersSlider img {
-    height: 600px;
-    width: 600px;
     border-radius: 16px;
 }
 

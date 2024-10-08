@@ -1,11 +1,11 @@
 .wrapSection {
     padding: 70px;
+    padding-top: 60px;
     color: white;
     background: #0A090C;
     display: flex;
     gap: 200px;
     width: 100%;
-    padding-top: 40px;
 }
 
 .content {
