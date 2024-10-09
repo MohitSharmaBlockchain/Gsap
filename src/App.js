@@ -38,7 +38,7 @@ function App() {
         tl.to('#heroSection', {
           borderRadius: 0,
           width: '100%',
-          marginTop: '230px'
+          marginTop: `${window.innerWidth > 899 ? 230 : 70}px`
         }, 0)
       });     
       

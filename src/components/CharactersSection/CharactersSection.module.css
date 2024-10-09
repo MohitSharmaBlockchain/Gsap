@@ -44,3 +44,55 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.mobileImg {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapSection {
+        padding: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .content {
+        align-items: center;
+        padding: 30px;
+        width: 100%;
+        gap: 12px;
+        z-index: 10;
+    }
+
+    .characters {
+        display: none;
+    }
+
+    .content span {
+        font-size: 12px;
+        padding: 9px 16px 6px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .mobileImg {
+        display: block;
+        width: 100%;
+        margin-top: -90px;
+    }
+
+    .mobileImg img {
+        width: 100%;
+    }
+}

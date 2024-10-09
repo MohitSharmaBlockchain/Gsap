@@ -4,7 +4,7 @@
     border-radius: 18px;
     width: 91%;
     overflow: hidden;
-    margin-top: 11vw;
+    margin-top: 168px;
 }
 
 .social {
@@ -129,4 +129,34 @@
 .downArrow:hover {
     outline: 2px solid #FF474A;
     outline-offset: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapSection {
+        margin-top: 90px;
+        padding-bottom: 30px;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .content span {
+        font-size: 12px;
+        padding: 9px 16px 6px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .heroBanner {
+        margin-top: 50px;
+    }
+
+    .downArrow {
+        width: 50px !important;
+        height: 50px !important;
+    }
 }

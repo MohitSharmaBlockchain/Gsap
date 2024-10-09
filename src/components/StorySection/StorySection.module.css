@@ -74,3 +74,65 @@
     width: 80px;
     background: white;
 }
+
+.mobileWrapSection {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .wrapSection {
+        display: none;
+    }
+
+    .mobileWrapSection {
+        display: block;
+    }
+
+    .upperWrap {
+        padding: 20px;
+        gap: 20px;
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+
+    .gridContent {
+        background: #B91416;
+        padding: 20px;
+    }
+
+    .gridContent h1 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .gridContent .heading {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .gridContent .heading .title {
+        padding: 9px 18px 6px;
+        font-size: 12px;
+    }
+
+    .line {
+        width: 15%;
+    }
+
+    .gridContent p {
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .mobileImg {
+        width: 100%;
+    }
+
+    .mobileImg img {
+        width: 100%;
+    }
+}

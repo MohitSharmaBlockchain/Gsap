@@ -65,3 +65,53 @@
 .links .img img {
     height: 100%;
 }
+
+@media screen and (max-width: 700px) {
+    .contract {
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        width: calc(100% - 40px);
+    }
+
+    .wrapSection {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 200px;
+        position: relative;
+    }
+
+    .content {
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        padding-top: 15px;
+    }
+
+    .content .headings {
+        flex-direction: row;
+    }
+
+    .buyImg1 {
+        width: 100px;
+    }
+
+    .buyImg2 {
+        width: 140px;
+    }
+
+    .links {
+        padding: 20px;
+        padding-top: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .links .img {
+        width: 48%;
+        aspect-ratio : 1 / 1;
+        height: auto;
+        position: relative;
+    }
+}

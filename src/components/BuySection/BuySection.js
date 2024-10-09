@@ -20,24 +20,24 @@ const BuySection = ({ updateBuySectionGsap }) => {
       var tl = gsap.timeline({ 
         scrollTrigger: {
           trigger: '#buySection',
-          start: `-${300*((window.innerWidth*0.06510416666)/100)}px top`,
-          end: `+=${200*((window.innerWidth*0.06510416666)/100)}`,
+          start: window.innerWidth > 899 ? `-${300*((window.innerWidth*0.06510416666)/100)}px top` : `-${150*((window.innerWidth*0.3333333333333333)/100)}px top`,
+          end: window.innerWidth > 899 ? `+=${200*((window.innerWidth*0.06510416666)/100)}` : `+=${150*((window.innerWidth*0.3333333333333333)/100)}`,
           markers: true,
           scrub: true,
         }
        })
       tl.to('#buySection', {
-        borderRadius: '18px',
+        borderRadius: window.innerWidth > 899 ? '18px' : '10px',
         width: '91%',
-        marginBottom: `${44*(window.innerWidth*0.06510416666)/100}}px`
+        marginBottom: window.innerWidth > 899 ? `${44*(window.innerWidth*0.06510416666)/100}}px` : `${15*(window.innerWidth*0.3333333333333333)/100}}px`
       }, 0)
       tl.to('#navbar', {
         borderRadius: '8px',
         width: '91%',
-        marginTop: '44px'
+        marginTop: window.innerWidth > 899 ? '44px' : '15px'
       }, 0)
       tl.to('#storySection', {
-        paddingBottom: '250px'
+        paddingBottom: window.innerWidth > 899 ? '250px' : '120px'
       }, 0)
 
     });     
@@ -46,14 +46,14 @@ const BuySection = ({ updateBuySectionGsap }) => {
   }, [updateBuySectionGsap])
 
   return (
-    <div style={window.innerWidth > 899 ? { height: `calc(100vh - ${200*((window.innerWidth*0.06510416666)/100)}px` } : {}} id="buySection" className={styles.wrapSection}>
+    <div style={window.innerWidth > 899 ? { height: `calc(100vh - ${200*((window.innerWidth*0.06510416666)/100)}px` } : { height: 'calc(100vh - 100px)' }} id="buySection" className={styles.wrapSection}>
       <div style={window.innerWidth > 899 ? { zoom: `${window.innerWidth*0.06510416666}%` } : {}} className={styles.content}>
         <div className={styles.headings}>
-          <img src="https://res.cloudinary.com/seimutants/image/upload/v1728241035/xxnmus6t9rzdz58hs8z7.svg" />
-          <img src="https://res.cloudinary.com/seimutants/image/upload/v1728241031/jhcqlbjcvyekw0gssaxu.svg" />
+          <img className={styles.buyImg1} src="https://res.cloudinary.com/seimutants/image/upload/v1728241035/xxnmus6t9rzdz58hs8z7.svg" />
+          <img className={styles.buyImg2} src="https://res.cloudinary.com/seimutants/image/upload/v1728241031/jhcqlbjcvyekw0gssaxu.svg" />
         </div>
         <div className={styles.contract}>
-          <p>0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</p>
+          <p>{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(0, 12)}...{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(process.env.REACT_APP_CONTRACT_ADDRESS?.length - 4, process.env.REACT_APP_CONTRACT_ADDRESS?.length)}</p>
           <Tooltip title={title} followCursor={true}>
             <img style={{ cursor: 'pointer' }} onClick={() => {
               window.navigator.clipboard.writeText((process.env.REACT_APP_CONTRACT_ADDRESS || ''))
@@ -65,7 +65,7 @@ const BuySection = ({ updateBuySectionGsap }) => {
           </Tooltip>
         </div>
       </div>
-      <div style={{ padding: `${(30*(window.innerWidth*0.06510416666))/100}px ${(80*(window.innerWidth*0.06510416666))/100}px ${(30*(window.innerWidth*0.06510416666))/100}px 0` }} className={styles.links}>
+      <div style={window.innerWidth > 899 ? { padding: `${(30*(window.innerWidth*0.06510416666))/100}px ${(80*(window.innerWidth*0.06510416666))/100}px ${(30*(window.innerWidth*0.06510416666))/100}px 0` } : {}} className={styles.links}>
         <div onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} style={hover1 ? { padding: `${(30*(window.innerWidth*0.06510416666))/100}px`, borderRadius: `${(10*(window.innerWidth*0.06510416666))/100}px`, boxShadow: `${(5.5*(window.innerWidth*0.06510416666))/100}px ${(7.3*(window.innerWidth*0.06510416666))/100}px 0px 0px #8B0A0A`, transform: `translate(-${(7*(window.innerWidth*0.06510416666))/100}px, -${(7*(window.innerWidth*0.06510416666))/100}px)` } : { padding: `${(30*(window.innerWidth*0.06510416666))/100}px`, borderRadius: `${(10*(window.innerWidth*0.06510416666))/100}px` }} className={styles.img}>
           <img src={'https://res.cloudinary.com/seimutants/image/upload/v1725533488/lt3zzspmfiecmghrvq2p.svg'} alt="" />
         </div>

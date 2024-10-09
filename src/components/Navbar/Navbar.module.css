@@ -34,3 +34,18 @@
 .links h1:hover {
     color: #D71518;
 }
+
+@media screen and (max-width: 700px) {
+    .wrapSection {
+        padding: 10px 12px;
+        margin-top: 15px;
+    }
+    
+    .links {
+        display: none;
+    }
+
+    .wrapSection img {
+        width: 110px;
+    }
+}

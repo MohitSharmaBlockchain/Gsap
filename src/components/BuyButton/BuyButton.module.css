@@ -17,3 +17,10 @@
     outline: 2px solid #FF474A;
     outline-offset: 4px;
 }
+
+@media screen and (max-width: 700px) {
+    .buyButton {
+        font-size: 12px;
+        padding: 11px 18px;
+    }
+}

@@ -20,6 +20,10 @@ const Loader = ({ loaderComplete }) => {
 
         gsap.to('#loader', { width: '100%', duration: 2 })
         gsap.to('#wrapSection', { left: '-100%', duration: 1 }, '>')
+
+        setTimeout(() => {
+          document.getElementsByTagName('body')[0].style.overflow = 'unset'
+        }, 2000)
       }
     }); 
     return () => ctx.revert();
