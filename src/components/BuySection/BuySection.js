@@ -53,7 +53,7 @@ const BuySection = ({ updateBuySectionGsap }) => {
           <img className={styles.buyImg2} src="https://res.cloudinary.com/seimutants/image/upload/v1728241031/jhcqlbjcvyekw0gssaxu.svg" />
         </div>
         <div className={styles.contract}>
-          <p>{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(0, 12)}...{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(process.env.REACT_APP_CONTRACT_ADDRESS?.length - 4, process.env.REACT_APP_CONTRACT_ADDRESS?.length)}</p>
+          {window.innerWidth > 899 ? <p>{process.env.REACT_APP_CONTRACT_ADDRESS}</p> : <p>{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(0, 12)}...{process.env.REACT_APP_CONTRACT_ADDRESS?.substring(process.env.REACT_APP_CONTRACT_ADDRESS?.length - 4, process.env.REACT_APP_CONTRACT_ADDRESS?.length)}</p>}
           <Tooltip title={title} followCursor={true}>
             <img style={{ cursor: 'pointer' }} onClick={() => {
               window.navigator.clipboard.writeText((process.env.REACT_APP_CONTRACT_ADDRESS || ''))
