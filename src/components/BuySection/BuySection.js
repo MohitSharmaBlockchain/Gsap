@@ -22,7 +22,7 @@ const BuySection = ({ updateBuySectionGsap }) => {
           trigger: '#buySection',
           start: window.innerWidth > 899 ? `-${300*((window.innerWidth*0.06510416666)/100)}px top` : `-${150*((window.innerWidth*0.3333333333333333)/100)}px top`,
           end: window.innerWidth > 899 ? `+=${200*((window.innerWidth*0.06510416666)/100)}` : `+=${150*((window.innerWidth*0.3333333333333333)/100)}`,
-          markers: true,
+          markers: false,
           scrub: true,
         }
        })

@@ -18,7 +18,7 @@ const HeroSection = ({ setupdateBuySectionGsap }) => {
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#charactersSlider',
-          markers: true,
+          markers: false,
           pin: true,
           pinSpacing: true,
           start: '-10px top',
@@ -78,11 +78,11 @@ const HeroSection = ({ setupdateBuySectionGsap }) => {
               <a href="https://telegram.com" target='_blank'><img src="https://res.cloudinary.com/seimutants/image/upload/v1728396183/frdewwhmpt9u7l99mmiq.svg" /></a>
             </div>
           </div>
-          {/* <img className={styles.image1} src="https://res.cloudinary.com/seimutants/image/upload/v1728155024/qcl3fjhpdlqnxup6trcj.svg" />
+          <img className={styles.image1} src="https://res.cloudinary.com/seimutants/image/upload/v1728155024/qcl3fjhpdlqnxup6trcj.svg" />
           <img className={styles.image2} src="https://res.cloudinary.com/seimutants/image/upload/v1728155024/bcofrmckrgduyupe6iru.svg" />
           <img className={styles.image3} src="https://res.cloudinary.com/seimutants/image/upload/v1728155024/i0z6mj3jwa0wds30b1ll.svg" />
           <img className={styles.image4} src="https://res.cloudinary.com/seimutants/image/upload/v1728155024/wtvlh80srip63bg5gfq7.svg" />
-          <img className={styles.image5} src="https://res.cloudinary.com/seimutants/image/upload/v1728155023/urcvgmoot2j3ov3x866c.svg" /> */}
+          <img className={styles.image5} src="https://res.cloudinary.com/seimutants/image/upload/v1728155023/urcvgmoot2j3ov3x866c.svg" />
         </div>
         {/* <div id="characterSliderPin"></div> */}
         <div style={window.innerWidth > 899 ? { paddingTop: `${(90*(window.innerWidth*0.06510416666))/100}px`, gap: `${(30*(window.innerWidth*0.06510416666))/100}px` } : { paddingTop: `${(60*(window.innerWidth*0.3333333333333333))/100}px`, gap: `${(15*(window.innerWidth*0.3333333333333333))/100}px` }} id="charactersSlider" className={styles.charactersSlider}>
