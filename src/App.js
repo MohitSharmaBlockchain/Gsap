@@ -8,25 +8,34 @@ import {
 import { useEffect, useState } from "react";
 import Home from "./components/pages/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap-trial";
 // import Loader from "./components/Loader/Loader";
+import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       ScrollTrigger.normalizeScroll({ allowNestedScroll: true });
       ScrollTrigger.config({ limitCallbacks: true });
+
+      const smoother = ScrollSmoother.create({
+        wrapper: "#smoothWrapper",
+        content: "#smoothContent",
+        smooth: 10,
+        effects: true,
+        smoothTouch: 0.1,
+      });
 
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".app",
           start: "top top",
           end: `+=${(200 / 735) * (window.innerWidth / 2.03443708609)}`,
-          markers: false,
+          markers: true,
           scrub: true,
         },
       });
@@ -60,15 +69,19 @@ function App() {
   // }
 
   return (
-    <div className="app">
-      {/* <Loader loaderComplete={!loading} /> */}
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Navigate to={"/"} />} />
-        </Routes>
-      </Router>
+    <div id="smoothWrapper">
+      <div id="smoothContent">
+        <div className="app">
+          {/* <Loader loaderComplete={!loading} /> */}
+          <Navbar />
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<Navigate to={"/"} />} />
+            </Routes>
+          </Router>
+        </div>
+      </div>
     </div>
   );
 }

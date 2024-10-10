@@ -18,7 +18,7 @@ const HeroSection = ({ setupdateBuySectionGsap }) => {
       var tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#charactersSlider",
-          markers: false,
+          markers: true,
           pin: true,
           pinSpacing: true,
           start: "-10px top",
